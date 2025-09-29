@@ -1,0 +1,20 @@
+<div class="card bg-base-100 shadow-sm animate-fade-in">
+  <figure>
+    <img
+      [src]="product().images | productImage"
+      [alt]="product().title"
+      class="cursor-pointer"
+      [routerLink]="['/product', product().slug ]"/>
+  </figure>
+  <div class="card-body">
+    <h2 class="card-title font-montserrat text-accent">
+      {{ product().title }}
+    </h2>
+    <p>{{ product().description | slice:0:70 }}...</p>
+    <div class="card-actions justify-end">
+      @for (tag of product().tags; track tag) {
+        <div class="badge badge-outline">{{ tag }}</div>
+      }
+    </div>
+  </div>
+</div>

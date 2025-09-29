@@ -1,1 +1,27 @@
-/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+@plugin "daisyui";
+
+@theme {
+  --font-montserrat: Montserrat, sans-serif;
+  --font-quicksand: Quicksand, sans-serif;
+  --animate-fade-in: fade-in 0.3s ease-out;
+
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url("../public/assets/fonts/montserrat/montserrat-alternates-medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Quicksand;
+  src: url("../public/assets/fonts/quicksand/Quicksand-Medium.ttf") format("truetype");
+}
